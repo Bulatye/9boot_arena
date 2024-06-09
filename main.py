@@ -8,8 +8,6 @@ magic_things = ["Звезда Провидения", "Меч Исцеления"
 names = ["Артем", "Борис", "Виктор", "Григорий", "Дмитрий", "Евгений", "Жан", "Захар", "Иван", "Константин", "Леонид", "Михаил", "Николай", "Олег", "Павел", "Роман", "Сергей", "Тимур", "Ульян", "Федор"]
 
 things = [Thing(magic_things[i], random.uniform(0, 0.1), random.randint(10, 20), random.randint(50, 100)) for i in range(0, 10)]
-
-
 characters = [Person(random.choice(names), random.randint(50, 100), random.randint(10, 20), random.uniform(0, 0.1)) for i in range(10)]
 
 for character in characters:
