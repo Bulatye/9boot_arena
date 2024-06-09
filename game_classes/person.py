@@ -9,10 +9,10 @@ class Person:
     def set_things(self, things):
         self.things = things
 
-    def reduce_health(self, attack):
+    def reduce_health(self, attack_damage):
         total_protection = self.base_protection_percent
         for thing in self.things:
             total_protection += thing.protection_percent
-        damage_taken = (1 - total_protection) * attack
+        damage_taken = (attack_damage - attack_damage*total_protection)
         self.health -= damage_taken
         print(f"{self.name} получил {damage_taken} урона. Текущее здоровье: {self.health}")
